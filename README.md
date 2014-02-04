@@ -2,7 +2,7 @@
 
 This is a plugin to get started writing a blog with
 [Lineman](http://linemanjs.com) managing the build and bringing with it both excellent markdown parsing as well as static asset (JS/CSS) management. We recommend you look at our
-[Blog template project](https://github.com/testdouble/lineman-blog-template/)
+[Blog template project](https://github.com/linemanjs/lineman-blog-template/)
 as a starting point.
 
 If you'd like to add this to a fresh Lineman project on your own, just:
