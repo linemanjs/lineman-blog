@@ -3,10 +3,7 @@
   "title": "An Markdown blogging plugin for Lineman",
   "version": "0.0.2",
   "homepage": "https://github.com/linemanjs/lineman-blog",
-  "author": {
-    "name": "Justin Searls",
-    "company": "Test Double"
-  },
+  "author": "Justin Searls",
   "repository": {
     "type": "git",
     "url": "git://github.com/linemanjs/lineman-blog.git"
