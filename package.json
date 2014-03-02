@@ -12,11 +12,11 @@
     "url": "git://github.com/linemanjs/lineman-blog.git"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "grunt-markdown-blog": ">= 0.2.0"
   },
   "peerDependencies": {
-    "lineman": ">= 0.19.0",
-    "grunt-markdown-blog": ">= 0.2.0"
+    "lineman": ">= 0.19.0"
   },
   "devDependencies": {
   },
