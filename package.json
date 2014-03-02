@@ -19,6 +19,8 @@
     "lineman": ">= 0.19.0"
   },
   "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-release": "~0.7.0"
   },
   "licenses": [
     {
