@@ -6,7 +6,10 @@
   "author": "Justin Searls",
   "repository": {
     "type": "git",
-    "url": "git://github.com/linemanjs/lineman-blog.git"
+    "url": "https://github.com/linemanjs/lineman-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linemanjs/lineman-blog/issues"
   },
   "dependencies": {
     "coffee-script": "~1.6.3",
