@@ -20,7 +20,12 @@
   },
   "devDependencies": {
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://testdouble.mit-license.org"
+    }
+  ],
   "keywords": [
     "lineman",
     "linemanplugin",
