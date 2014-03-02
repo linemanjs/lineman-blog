@@ -1,6 +1,6 @@
 {
   "name": "lineman-blog",
-  "description": "An Markdown blogging plugin for Lineman",
+  "description": "A Markdown blogging plugin for Lineman",
   "version": "0.0.2",
   "homepage": "https://github.com/linemanjs/lineman-blog",
   "author": "Justin Searls",
