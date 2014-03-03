@@ -20,7 +20,7 @@ module.exports = (lineman) ->
 
     markdown:
       options:
-        author: "FirstName LastName"
+        author: "<%= pkg.author.name %>"
         title: "my lineman blog"
         description: "<%= pkg.description %>"
         url: "<%= pkg.homepage %>"
