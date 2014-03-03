@@ -21,7 +21,7 @@ module.exports = (lineman) ->
     markdown:
       options:
         author: "FirstName LastName"
-        title: "<%= pkg.title %>"
+        title: "my lineman blog"
         description: "<%= pkg.description %>"
         url: "<%= pkg.homepage %>"
         rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
