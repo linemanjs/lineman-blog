@@ -3,7 +3,10 @@
   "description": "A Markdown blogging plugin for Lineman",
   "version": "0.0.3",
   "homepage": "https://github.com/linemanjs/lineman-blog",
-  "author": "Justin Searls",
+  "author": {
+    "name": "Justin Searls",
+    "email": "justin@testdouble.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/linemanjs/lineman-blog.git"
@@ -19,8 +22,8 @@
     "lineman": ">= 0.27.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-release": "~0.7.0"
+    "grunt": "^0.4.2",
+    "grunt-release": "^0.7.0"
   },
   "licenses": [
     {
