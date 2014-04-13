@@ -16,15 +16,15 @@
   },
   "dependencies": {
     "coffee-script": "~1.6.3",
-    "grunt-markdown-blog": ">= 0.2.0"
+    "grunt-markdown-blog": ">= 0.2.0",
+    "underscore": "~1.6.0"
   },
   "peerDependencies": {
     "lineman": ">= 0.27.0"
   },
   "devDependencies": {
     "grunt": "^0.4.2",
-    "grunt-release": "^0.7.0",
-    "underscore": "~1.6.0"
+    "grunt-release": "^0.7.0"
   },
   "licenses": [
     {
@@ -32,6 +32,9 @@
       "url": "http://testdouble.mit-license.org"
     }
   ],
+  "scripts": {
+    "postinstall": "node script/postinstall.js"
+  },
   "keywords": [
     "lineman",
     "linemanplugin",
