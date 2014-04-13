@@ -14,7 +14,7 @@ isInstalledAsDependency = (dir, topDir) ->
 
 createBlogTemplatesRelativeTo = (dir) ->
   mainTemplatesPath = path.join(dir, "app/templates")
-  templateFilenames = ["index archive page post wrapper"].split(" ")
+  templateFilenames = "index archive page post wrapper".split(" ")
   extension         = ".us"
   templateFilepaths = _(templateFilenames).map (filename) -> path.join(dir, "#{mainTemplatesPath}/#{filename}#{extension}")
 
