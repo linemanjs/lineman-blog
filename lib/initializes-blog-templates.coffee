@@ -8,15 +8,16 @@ module.exports =
     topDir = findsRoot.findTopPackageJson(dir)
     return unless isInstalledAsDependency(dir, topDir)
     createBlogTemplatesRelativeTo(topDir)
+    createSamplePostsRelativeTo(topDir)
 
 isInstalledAsDependency = (dir, topDir) ->
   topDir? && topDir != dir
 
 createBlogTemplatesRelativeTo = (dir) ->
-  mainTemplatesPath = path.join(dir, "app/templates")
+  templatesPath = path.join(dir, "app/templates")
   templateFilenames = "index archive page post wrapper".split(" ")
   extension         = ".us"
-  templateFilepaths = _(templateFilenames).map (filename) -> "#{mainTemplatesPath}/#{filename}#{extension}"
+  templateFilepaths = _(templateFilenames).map (filename) -> "#{templatesPath}/#{filename}#{extension}"
 
   indexTemplate = """
     <%= site.htmlFor(_(site.posts).last()) %>
@@ -107,11 +108,11 @@ createBlogTemplatesRelativeTo = (dir) ->
     </html>
     """
 
-  fs.writeFileSync "#{mainTemplatesPath}/index.us",   indexTemplate
-  fs.writeFileSync "#{mainTemplatesPath}/archive.us", archiveTemplate
-  fs.writeFileSync "#{mainTemplatesPath}/page.us",    pageTemplate
-  fs.writeFileSync "#{mainTemplatesPath}/post.us",    postTemplate
-  fs.writeFileSync "#{mainTemplatesPath}/wrapper.us", wrapperTemplate
+  fs.writeFileSync "#{templatesPath}/index.us",   indexTemplate
+  fs.writeFileSync "#{templatesPath}/archive.us", archiveTemplate
+  fs.writeFileSync "#{templatesPath}/page.us",    pageTemplate
+  fs.writeFileSync "#{templatesPath}/post.us",    postTemplate
+  fs.writeFileSync "#{templatesPath}/wrapper.us", wrapperTemplate
 
   console.log """
     Thanks for installing lineman-blog!
@@ -119,4 +120,48 @@ createBlogTemplatesRelativeTo = (dir) ->
     We've added some basic blog templates to help you get started, here:
 
     #{templateFilepaths.join('\n')}
+    """
+
+createSamplePostsRelativeTo = (dir) ->
+  postsPath = path.join(dir, "app/posts")
+  unless fs.existsSync(postsPath)
+    fs.mkdirSync(postsPath)
+
+  samplePostOne = """
+    ---
+    title: "A very nice title. With punctuation!"
+    author:
+      name: "Double Agent Man"
+    ---
+    I'm just an example post
+
+    > and I'm a quote of some markdown.
+
+    Yay.
+    """
+
+  samplePostTwo = """
+    I'm another example post
+
+    ``` coffeescript
+    andIAmSome = "CoffeeScript"
+    ```
+
+    Sweet.
+    """
+
+  samplePostThree = """
+    I'm a third example post.
+
+    I have **bold** text.
+    """
+
+  fs.writeFileSync "#{postsPath}/2013-03-17-example-post-1.md", samplePostOne
+  fs.writeFileSync "#{postsPath}/2013-03-16-example-post-2.md", samplePostTwo
+  fs.writeFileSync "#{postsPath}/2013-03-15-example-post-3.md", samplePostThree
+
+  console.log """
+    We've also added some example posts here:
+
+    #{postsPath}
     """
