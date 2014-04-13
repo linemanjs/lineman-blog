@@ -155,11 +155,13 @@ createBlogTemplatesRelativeTo = (dir) ->
   fs.writeFileSync "#{templatesPath}/wrapper.us", wrapperTemplate
 
   console.log """
+
     Thanks for installing lineman-blog!
 
     We've added some basic blog templates to help you get started, here:
 
     #{templateFilepaths.join('\n')}
+
     """
 
 createSamplePostsRelativeTo = (dir) ->
@@ -205,6 +207,7 @@ createSamplePostsRelativeTo = (dir) ->
     We've also added some example posts here:
 
     #{postsPath}
+
     """
 
   createSamplePagesRelativeTo = (dir) ->
