@@ -16,7 +16,7 @@ createBlogTemplatesRelativeTo = (dir) ->
   mainTemplatesPath = path.join(dir, "app/templates")
   templateFilenames = "index archive page post wrapper".split(" ")
   extension         = ".us"
-  templateFilepaths = _(templateFilenames).map (filename) -> path.join(dir, "#{mainTemplatesPath}/#{filename}#{extension}")
+  templateFilepaths = _(templateFilenames).map (filename) -> "#{mainTemplatesPath}/#{filename}#{extension}"
 
   indexTemplate = """
     <%= site.htmlFor(_(site.posts).last()) %>
@@ -107,11 +107,11 @@ createBlogTemplatesRelativeTo = (dir) ->
     </html>
     """
 
-  fs.writeFileSync path.join(dir, "#{mainTemplatesPath}/index.us}"),   indexTemplate
-  fs.writeFileSync path.join(dir, "#{mainTemplatesPath}/archive.us}"), archiveTemplate
-  fs.writeFileSync path.join(dir, "#{mainTemplatesPath}/page.us}"),    pageTemplate
-  fs.writeFileSync path.join(dir, "#{mainTemplatesPath}/post.us}"),    postTemplate
-  fs.writeFileSync path.join(dir, "#{mainTemplatesPath}/wrapper.us}"), wrapperTemplate
+  fs.writeFileSync "#{mainTemplatesPath}/index.us",   indexTemplate
+  fs.writeFileSync "#{mainTemplatesPath}/archive.us", archiveTemplate
+  fs.writeFileSync "#{mainTemplatesPath}/page.us",    pageTemplate
+  fs.writeFileSync "#{mainTemplatesPath}/post.us",    postTemplate
+  fs.writeFileSync "#{mainTemplatesPath}/wrapper.us", wrapperTemplate
 
   console.log """
     Thanks for installing lineman-blog!
