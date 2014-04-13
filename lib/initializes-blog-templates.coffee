@@ -7,6 +7,11 @@ module.exports =
   initialize: (dir = process.cwd()) ->
     topDir = findsRoot.findTopPackageJson(dir)
     return unless isInstalledAsDependency(dir, topDir)
+    console.log """
+
+      Thanks for installing lineman-blog!
+
+      """
     createSamplePagesRelativeTo(topDir)
     createBlogTemplatesRelativeTo(topDir)
     createSamplePostsRelativeTo(topDir)
@@ -155,8 +160,6 @@ createBlogTemplatesRelativeTo = (dir) ->
   fs.writeFileSync "#{templatesPath}/wrapper.us", wrapperTemplate
 
   console.log """
-
-    Thanks for installing lineman-blog!
 
     We've added some basic blog templates to help you get started, here:
 
