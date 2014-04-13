@@ -15,8 +15,10 @@
     "url": "https://github.com/linemanjs/lineman-blog/issues"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3",
-    "grunt-markdown-blog": ">= 0.2.0"
+    "coffee-script": "~1.7.1",
+    "grunt-markdown-blog": ">= 0.2.0",
+    "underscore": "~1.6.0",
+    "find-root-package": "0.0.1"
   },
   "peerDependencies": {
     "lineman": ">= 0.27.0"
@@ -31,6 +33,9 @@
       "url": "http://testdouble.mit-license.org"
     }
   ],
+  "scripts": {
+    "postinstall": "node script/postinstall.js"
+  },
   "keywords": [
     "lineman",
     "linemanplugin",
