@@ -7,11 +7,51 @@ module.exports =
   initialize: (dir = process.cwd()) ->
     topDir = findsRoot.findTopPackageJson(dir)
     return unless isInstalledAsDependency(dir, topDir)
+    createSamplePagesRelativeTo(topDir)
     createBlogTemplatesRelativeTo(topDir)
     createSamplePostsRelativeTo(topDir)
 
 isInstalledAsDependency = (dir, topDir) ->
   topDir? && topDir != dir
+
+createSamplePagesRelativeTo = (dir) ->
+  jsPath    = path.join(dir, "app/js")
+  pagesPath = path.join(dir, "app/pages")
+
+  if fs.existsSync "#{jsPath}/hello.coffee"
+    fs.unlinkSync "#{jsPath}/hello.coffee"
+
+  if fs.existsSync "#{pagesPath}/index.us"
+    fs.unlinkSync "#{pagesPath}/index.us"
+
+  sampleMarkdownPage = """
+    ---
+    title: "About us"
+    ---
+    # Markdown page
+
+    I'm just an about page formatted in _markdown_!
+    """
+
+  sampleHtmlPage = """
+    <!DOCTYPE html>
+    <html>
+      <body>
+        I'm just plain HTML.
+      </body>
+    </html>
+    """
+
+  fs.writeFileSync "#{pagesPath}/about.md", sampleMarkdownPage
+  fs.writeFileSync "#{pagesPath}/plain.html", sampleHtmlPage
+
+  console.log """
+
+    We've added some sample pages here:
+
+    #{pagesPath}
+
+    """
 
 createBlogTemplatesRelativeTo = (dir) ->
   templatesPath = path.join(dir, "app/templates")
@@ -161,7 +201,11 @@ createSamplePostsRelativeTo = (dir) ->
   fs.writeFileSync "#{postsPath}/2013-03-15-example-post-3.md", samplePostThree
 
   console.log """
+
     We've also added some example posts here:
 
     #{postsPath}
     """
+
+  createSamplePagesRelativeTo = (dir) ->
+    pagesPath = path.join(dir, "app/pages")
