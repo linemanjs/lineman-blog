@@ -1,8 +1,9 @@
 {
   "name": "lineman-blog",
   "description": "A Markdown blogging plugin for Lineman",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "homepage": "https://github.com/linemanjs/lineman-blog",
+  "license": "MIT",
   "author": {
     "name": "Justin Searls",
     "email": "justin@testdouble.com"
@@ -16,10 +17,7 @@
   },
   "dependencies": {
     "coffee-script": "~1.6.3",
-    "grunt-markdown-blog": ">= 0.2.0"
-  },
-  "peerDependencies": {
-    "lineman": ">= 0.27.0"
+    "grunt-markdown-blog": "^1.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.2",

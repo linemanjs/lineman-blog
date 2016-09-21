@@ -8,7 +8,7 @@ module.exports = (lineman) ->
     markdown:
       posts: "app/posts/*.md"
       pages: "app/pages/**/*.md"
-      templates: "app/templates/**/*.us"
+      templates: "app/templates/**/*.pug"
 
   config:
 
@@ -27,11 +27,11 @@ module.exports = (lineman) ->
         rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
         #disqus: "my_disqus_name" #<-- uncomment and set your disqus account name to enable disqus support
         layouts:
-          wrapper: "app/templates/wrapper.us"
-          index: "app/templates/index.us"
-          post: "app/templates/post.us"
-          page: "app/templates/page.us"
-          archive: "app/templates/archive.us"
+          wrapper: "app/templates/wrapper.pug"
+          index: "app/templates/index.pug"
+          post: "app/templates/post.pug"
+          page: "app/templates/page.pug"
+          archive: "app/templates/archive.pug"
         paths:
           posts: "<%= files.markdown.posts %>"
           pages: "<%= files.markdown.pages %>"
