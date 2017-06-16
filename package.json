@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "coffee-script": "~1.6.3",
-    "grunt-markdown-blog": "^1.1.0"
+    "grunt-markdown-blog": "^1.2.0"
   },
   "devDependencies": {
     "grunt": "^0.4.2",
