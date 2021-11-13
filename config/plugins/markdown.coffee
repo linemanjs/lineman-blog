@@ -40,7 +40,7 @@ module.exports = (lineman) ->
           rss: "index.xml"
         pathRoots:
           posts: "posts"
-          pages: ""
+          pages: "" # we want pages to show up in the root of the site
 
       dev:
         dest: "generated"
