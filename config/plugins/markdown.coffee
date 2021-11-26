@@ -38,6 +38,7 @@ module.exports = (lineman) ->
           index: "index.html"
           archive: "archive.html"
           rss: "index.xml"
+          json: "index.json"
         pathRoots:
           posts: "posts"
           pages: "" # we want pages to show up in the root of the site
