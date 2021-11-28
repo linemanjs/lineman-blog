@@ -16,12 +16,8 @@
     "url": "https://github.com/linemanjs/lineman-blog/issues"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3",
-    "grunt-markdown-blog": "^2.0.0"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.2",
-    "grunt-release": "^0.7.0"
+    "coffeescript": "^2.6.1",
+    "grunt-markdown-blog": "^3.0.0"
   },
   "licenses": [
     {

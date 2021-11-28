@@ -21,10 +21,11 @@ module.exports = (lineman) ->
     markdown:
       options:
         author: "<%= pkg.author.name %>"
+        authorUrl: "<%= pkg.homepage %>"
         title: "my lineman blog"
         description: "<%= pkg.description %>"
         url: "<%= pkg.homepage %>"
-        rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
+        feedCount: 10 #<-- set to zero to disable RSS and JSONFeed generation
         #disqus: "my_disqus_name" #<-- uncomment and set your disqus account name to enable disqus support
         layouts:
           wrapper: "app/templates/wrapper.pug"
@@ -38,6 +39,7 @@ module.exports = (lineman) ->
           index: "index.html"
           archive: "archive.html"
           rss: "index.xml"
+          json: "index.json"
         pathRoots:
           posts: "posts"
           pages: "" # we want pages to show up in the root of the site
